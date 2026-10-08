@@ -1,0 +1,16 @@
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Archivos generados por cada tarea (se regeneran ejecutando el notebook).
+# Los entregables finales se publican como GitHub Release, no en el repositorio.
+/*/data/
+/*/entregables/
+/*/scraping.log
+/*/evidencia/*.pptx
+
+# Editor y sistema operativo
+.vscode/
+.idea/
+.DS_Store
