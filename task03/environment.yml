@@ -1,0 +1,14 @@
+name: task03
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - selenium>=4.20
+  - pandas
+  - openpyxl
+  - python-pptx
+  - matplotlib
+  - jupyterlab
+  - tqdm
+  - ipywidgets  # barra de progreso de tqdm dentro de Jupyter
+  - pygobject   # capturas de pantalla completa vía xdg-desktop-portal (Linux)
