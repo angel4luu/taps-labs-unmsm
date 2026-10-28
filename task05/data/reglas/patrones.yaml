@@ -1,0 +1,80 @@
+# Reglas del componente 1. Los patrones se aplican sobre el texto normalizado
+# (minúsculas, sin tildes). Orden: primero los guardarraíles, luego el resto.
+# En las respuestas, {nombre} se reemplaza por el nombre del estudiante (o se omite).
+
+guardarrailes:
+  - nombre: deshonestidad
+    patrones:
+      - '\b(respuestas?|solucion(ario)?|claves?) (del|de la|de los|para el|de mi) (examen|parcial|final|practica|prueba)'
+      - '\b(hazme|haz|resuelve|resuelveme) (el|mi|la) (examen|parcial|practica|tarea|trabajo)'
+      - '\b(plagi|copiar en el examen|suplantar|rendir por mi|dar el examen por mi)'
+      - '\b(falsificar|adulterar|cambiar) (mi |una )?(nota|constancia|certificado|firma)'
+    respuestas:
+      - "No puedo ayudarte con eso: va contra la integridad académica de la UNMSM. Sí puedo orientarte sobre trámites, matrícula o grados."
+
+  - nombre: datos_personales
+    patrones:
+      - '\b(codigo|notas?|promedio|dni|direccion|telefono|correo|record)( academico)? (de|del) (un |otro |otra )?(alumno|estudiante|compa[nñ]er[oa]|profesor|docente|amig[oa]|otra persona)\b'
+      - '\b(codigo|notas?|promedio|dni|direccion|telefono|correo|record)( academico)? de mi (compa[nñ]er[oa]|amig[oa]|enamorad[oa]|pareja)'
+      - '\b\d{8}\b'
+    # Nombre propio tras "notas/código de ...": se evalúa sobre el texto original (mayúsculas)
+    patrones_original:
+      - '(?i:c[oó]digo|notas?|promedio|dni|r[eé]cord)\s+(?i:de|del)\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+'
+    respuestas:
+      - "No manejo datos personales (códigos, notas, DNI o récord de otras personas). Para tu propia información académica ingresa al SUM con tu cuenta institucional."
+
+  - nombre: inyeccion
+    patrones:
+      - '\b(ignora|olvida|omite|salta(te)?) (todas )?(tus|las) (instrucciones|reglas|indicaciones)'
+      - '\b(actua|comportate|finge) como\b'
+      - '\b(modo desarrollador|jailbreak|prompt del sistema|system prompt)'
+    respuestas:
+      - "Solo puedo responder consultas sobre trámites académicos de pregrado en la UNMSM, siguiendo mis reglas de funcionamiento."
+
+reglas:
+  - nombre: nombre
+    patrones:
+      - '^(?:hola )?(?:me llamo|mi nombre es|soy) ([a-zñ]+)'
+    respuestas:
+      - "¡Mucho gusto, {nombre_capturado}! ¿En qué trámite académico te ayudo?"
+
+  - nombre: saludo
+    patrones:
+      - '^(hola|holi|buenas|buenos dias|buenas tardes|buenas noches|hey|que tal|saludos)\b'
+    max_palabras: 4
+    respuestas:
+      - "¡Hola{nombre}! Soy el asistente académico de pregrado de la UNMSM. Puedo orientarte sobre matrícula, repitencia, reserva, grados y títulos, trámites y más. Escribe *ayuda* para ver los temas."
+
+  - nombre: ayuda
+    patrones:
+      - '^(ayuda|menu|opciones|temas|que puedes hacer|en que me ayudas|help)\b'
+    max_palabras: 4
+    respuestas:
+      - "Estos son los temas con los que puedo ayudarte{nombre}:"
+
+  - nombre: gracias
+    patrones:
+      - '^(muchas )?(gracias|grax|thank)'
+    max_palabras: 5
+    respuestas:
+      - "¡Con gusto{nombre}! Si tienes otra consulta, aquí estoy."
+
+  - nombre: despedida
+    patrones:
+      - '^(adios|chau|chao|hasta luego|nos vemos|salir|exit|bye)\b'
+    max_palabras: 5
+    respuestas:
+      - "¡Hasta luego{nombre}! Éxitos en tu ciclo académico."
+    fin: true
+
+# Menú de respaldo si no existe data/intenciones/definicion.yaml
+menu_respaldo:
+  - "Matrícula — ¿Cómo me matriculo en el SUM?"
+  - "Reserva y retiro — ¿Cómo hago la reserva de matrícula?"
+  - "Repitencia — Me jalaron un curso dos veces, ¿qué pasa?"
+  - "Créditos y cursos — ¿Cuántos créditos puedo llevar?"
+  - "Grados y títulos — ¿Qué necesito para el bachiller?"
+  - "Trámites — ¿Cómo pido una constancia de estudios?"
+  - "Calendario — ¿Hasta cuándo es la matrícula?"
+  - "Bienestar — ¿Cómo accedo al comedor universitario?"
+  - "Biblioteca — ¿Cómo saco un libro de la biblioteca?"
