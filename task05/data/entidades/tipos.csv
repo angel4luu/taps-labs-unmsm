@@ -1,0 +1,15 @@
+tipo,valor,sinonimos
+tipo_tramite,regular,matricula regular;matricula normal
+tipo_tramite,extemporanea,extemporanea;rezagada;rezagados;fuera de fecha;tardia
+tipo_tramite,condicionada,condicionada;matricula condicionada
+tipo_tramite,reserva,reserva;reserva de matricula;reservar;congelar
+tipo_tramite,reactualizacion,reactualizacion;reactualizar
+tipo_tramite,anulacion,anulacion;anular;anulacion de matricula
+tipo_tramite,rectificacion,rectificacion;rectificar;agregar curso;retirar curso
+tipo_tramite,traslado,traslado;traslado interno;traslado externo
+tipo_tramite,convalidacion,convalidacion;convalidar
+tipo_tramite,constancia,constancia;certificado de estudios;constancia de matricula
+tipo_tramite,carne,carne;carnet;carne universitario
+grado,bachiller,bachiller;bachillerato;grado de bachiller
+grado,titulo,titulo;titulo profesional;titulacion;titularme
+grado,egresado,egresado;egreso;egresar

@@ -1,0 +1,301 @@
+texto,intencion,particion
+como me matriculo este ciclo,matricula,train
+cuales son los pasos para la matricula en el sum,matricula,train
+quiero matricularme en mis cursos,matricula,train
+como registro mis asignaturas,matricula,train
+donde hago mi matricula,matricula,train
+la matricula es por internet o presencial,matricula,train
+que necesito para matricularme,matricula,train
+me puedo matricular desde el celular,matricula,train
+como funciona la matricula regular,matricula,train
+quiero inscribirme a los cursos del semestre,matricula,test
+ayudame con la matricula,matricula,train
+como se hace la matricula de ingresantes,matricula,train
+que requisitos hay para la matricula,matricula,test
+puedo matricularme si debo a la facultad,matricula,train
+necesito certificado de salud para matricularme,matricula,train
+como me matriculo de forma presencial en la facultad,matricula,train
+el sum no me deja matricularme que hago,matricula,test
+quiero hacer la matricula extemporanea,matricula,train
+me olvide de matricularme todavia puedo,matricula,test
+hay matricula rezagada,matricula,test
+matricla como se hace,matricula,train
+komo me matrikulo en el sum,matricula,train
+q necesito pa matricularme,matricula,train
+xfa como me inscribo en mis cursos,matricula,train
+no se como matricularme ayuda,matricula,train
+hasta cuando es la matricula,calendario,train
+cuando empieza la matricula,calendario,train
+cuales son las fechas de matricula,calendario,test
+cuando inicia el ciclo,calendario,train
+cuando es la matricula extemporanea,calendario,train
+hasta que fecha puedo reservar matricula,calendario,train
+cuando cierran las actas de notas,calendario,train
+cual es el cronograma academico,calendario,test
+quien aprueba el calendario academico,calendario,train
+cuando empiezan las clases del semestre,calendario,train
+hasta que dia hay rectificacion de matricula,calendario,train
+cuando termina el semestre,calendario,test
+en que fecha publican el cronograma,calendario,test
+cuando salen las notas finales,calendario,train
+fecha limite para matricularme,calendario,train
+cuando es la matricula 2026-II,calendario,train
+cuando abren el sum para matricula,calendario,train
+hay plazo para la anulacion de matricula,calendario,train
+cuando es el periodo de matricula regular,calendario,train
+calendario de actividades academicas de pregrado,calendario,train
+kuando es la matricula,calendario,train
+hasta q dia es la matricula,calendario,train
+fechas de matri porfa,calendario,train
+cuando arranca el ciclo,calendario,train
+el cronograma ya salio,calendario,test
+me jalaron un curso que pasa,repitencia,test
+desaprobe una asignatura que hago,repitencia,train
+me jalaron dos veces el mismo curso,repitencia,train
+desaprobe tres veces una materia,repitencia,train
+que pasa si jalo por cuarta vez,repitencia,train
+me pueden separar por desaprobar cursos,repitencia,train
+que es la tercera matricula,repitencia,train
+que es la cuarta matricula,repitencia,train
+me asignan tutoria si desapruebo dos veces,repitencia,test
+que es la matricula condicionada,repitencia,train
+tengo que llevar de nuevo el curso que jale,repitencia,test
+reprobe calculo que hago,repitencia,train
+que es el examen de jurado ad hoc,repitencia,train
+me faltan tres cursos puedo dar jurado ad hoc,repitencia,train
+que es la repitencia,repitencia,train
+cuantas veces puedo desaprobar un curso,repitencia,train
+me botan si jalo cuatro veces,repitencia,train
+desaprobe fisica dos veces puedo matricularme,repitencia,train
+el curso que jale no se dicta este ciclo,repitencia,train
+que pasa con mi matricula si desaprobe,repitencia,train
+me jalaron en calculo 2 veces,repitencia,train
+jale el curso x tercera vez,repitencia,train
+desaprove un curso q hago,repitencia,test
+m jalaron otra vez,repitencia,test
+reprobe por segunda vez algebra,repitencia,train
+como hago la reserva de matricula,reserva_retiro,train
+quiero reservar mi matricula,reserva_retiro,train
+como anulo mi matricula,reserva_retiro,train
+quiero dejar de estudiar un ciclo,reserva_retiro,train
+como retomo mis estudios despues de una reserva,reserva_retiro,train
+que es la reactualizacion de matricula,reserva_retiro,train
+como me retiro de la carrera,reserva_retiro,train
+quiero renunciar a la universidad,reserva_retiro,train
+que es el abandono de estudios,reserva_retiro,train
+cuanto tiempo puedo reservar mi matricula,reserva_retiro,test
+puedo anular mi matricula por salud,reserva_retiro,train
+puedo congelar mis estudios,reserva_retiro,test
+que es la separacion definitiva voluntaria,reserva_retiro,test
+quiero darme de baja del semestre,reserva_retiro,test
+cuantos años puedo dejar de estudiar sin perder la vacante,reserva_retiro,train
+los ingresantes pueden reservar matricula,reserva_retiro,train
+como regreso a san marcos despues de dejar de estudiar,reserva_retiro,train
+quiero cancelar mi matricula,reserva_retiro,train
+puedo reactualizar mi matricula,reserva_retiro,train
+que pasa si no me matriculo varios ciclos,reserva_retiro,test
+reserba de matricula como es,reserva_retiro,train
+kiero reservar mi matri,reserva_retiro,train
+como anulo el ciclo xfa,reserva_retiro,train
+me quiero salir de la carrera,reserva_retiro,train
+quiero dejar la u un tiempo,reserva_retiro,train
+cuantos creditos puedo llevar,creditos_cursos,test
+cual es el minimo de creditos,creditos_cursos,train
+cual es el maximo de creditos por semestre,creditos_cursos,train
+que pasa si llevo menos de doce creditos,creditos_cursos,train
+como agrego un curso a mi matricula,creditos_cursos,train
+como retiro un curso despues de matricularme,creditos_cursos,test
+que es la rectificacion de matricula,creditos_cursos,train
+cuantos creditos se llevan en verano,creditos_cursos,test
+como funcionan los cursos de verano,creditos_cursos,train
+puedo adelantar cursos en verano,creditos_cursos,test
+que es un estudiante regular,creditos_cursos,train
+que es el plan de estudios vigente,creditos_cursos,train
+mi plan de estudios esta en extincion,creditos_cursos,train
+puedo llevar cursos de otro plan,creditos_cursos,test
+que es un credito academico,creditos_cursos,train
+puedo llevar 28 creditos,creditos_cursos,train
+me sancionan por llevar pocos creditos,creditos_cursos,train
+quiero cambiar un curso por otro,creditos_cursos,train
+hay cruce de horarios puedo rectificar,creditos_cursos,train
+como se calcula el ciclo de estudios,creditos_cursos,train
+cuantos creditos max puedo llevar,creditos_cursos,train
+kiero agregar un curso,creditos_cursos,train
+puedo llevar menos de 12 creditos,creditos_cursos,train
+creditos minimos pa ser regular,creditos_cursos,train
+quiero retirar un curso xq no me da el tiempo,creditos_cursos,train
+que necesito para el bachiller,grados_titulos,train
+como saco mi bachiller,grados_titulos,train
+requisitos para el grado de bachiller,grados_titulos,train
+como obtengo mi titulo profesional,grados_titulos,train
+que modalidades hay para titularme,grados_titulos,train
+cuando soy egresado,grados_titulos,train
+como tramito mi grado academico,grados_titulos,train
+necesito ingles para el bachiller,grados_titulos,test
+necesito tesis para titularme,grados_titulos,train
+cuanto cuesta el bachiller,grados_titulos,test
+donde se tramita el titulo,grados_titulos,train
+que es el trabajo de suficiencia profesional,grados_titulos,test
+puedo sacar el titulo sin bachiller,grados_titulos,train
+ya termine mis creditos como egreso,grados_titulos,train
+cuanto demora el tramite del bachiller,grados_titulos,train
+que es la constancia de egresado,grados_titulos,train
+requisitos para sustentar mi tesis,grados_titulos,train
+puedo sacar bachiller automatico,grados_titulos,train
+quien me da el diploma de bachiller,grados_titulos,test
+como me titulo por tesis,grados_titulos,train
+q onda con mi bachiller,grados_titulos,train
+como saco el titulo xfa,grados_titulos,train
+bachiller requisitos porfa,grados_titulos,train
+ya egrese y ahora q,grados_titulos,train
+titularme como es,grados_titulos,test
+como pido una constancia de estudios,tramites,train
+como saco mi historial academico,tramites,test
+donde veo mis notas,tramites,train
+como obtengo mi reporte de matricula,tramites,train
+donde descargo la pre matricula,tramites,test
+como calculan mi promedio ponderado,tramites,train
+como se si estoy en el tercio superior,tramites,train
+como convalido cursos,tramites,test
+como hago un traslado interno,tramites,train
+puedo hacer traslado externo a san marcos,tramites,train
+como pido una constancia de orden de merito,tramites,train
+donde saco mi record academico,tramites,test
+que es el reporte de pre matricula,tramites,train
+como reingreso a la universidad,tramites,train
+como solicito una constancia de matricula,tramites,train
+el profesor puso mal mi nota como reclamo,tramites,test
+como tramito mi carne universitario,tramites,train
+donde pido un certificado de notas,tramites,train
+como funciona la convalidacion por segunda carrera,tramites,train
+que documentos da el sum,tramites,train
+konstancia de estudios donde la pido,tramites,train
+kiero mi record de notas,tramites,train
+como veo mi ranking,tramites,train
+nesesito un certificado de estudios,tramites,train
+quiero cambiarme de carrera dentro de san marcos,tramites,train
+como accedo al comedor universitario,bienestar,test
+que requisitos hay para el comedor,bienestar,train
+donde pido apoyo economico,bienestar,train
+tengo problemas de salud a quien acudo,bienestar,train
+donde me hago el examen medico,bienestar,train
+la universidad tiene clinica,bienestar,train
+hay apoyo psicologico para estudiantes,bienestar,train
+como pido una evaluacion socioeconomica,bienestar,train
+donde queda la unidad de bienestar,bienestar,train
+necesito ayuda por problemas familiares,bienestar,test
+donde saco el certificado de salud,bienestar,train
+hay becas de alimentacion,bienestar,test
+tengo depresion donde me pueden ayudar,bienestar,train
+como me inscribo al comedor,bienestar,test
+hay seguro de salud para estudiantes,bienestar,train
+donde atiende la clinica universitaria,bienestar,train
+quiero una cita con el psicologo de la facultad,bienestar,train
+no tengo dinero para el almuerzo,bienestar,train
+hay residencia universitaria,bienestar,train
+como pido ayuda por una enfermedad,bienestar,train
+komedor universitario como entro,bienestar,train
+ayuda economica xfa,bienestar,train
+estoy muy estresado con la u,bienestar,train
+necesito apoyo emocional,bienestar,train
+donde me vacunan en la universidad,bienestar,test
+como saco un libro de la biblioteca,biblioteca,train
+como funciona el prestamo de libros,biblioteca,train
+donde queda la biblioteca central,biblioteca,train
+cual es el horario de la biblioteca,biblioteca,train
+como accedo a las bases de datos,biblioteca,test
+como entro a las revistas electronicas,biblioteca,test
+puedo llevar libros a mi casa,biblioteca,test
+debo un libro puedo matricularme,biblioteca,train
+que pasa si devuelvo tarde un libro,biblioteca,test
+como busco tesis en el repositorio,biblioteca,train
+la biblioteca presta laptops,biblioteca,train
+necesito un libro para mi curso,biblioteca,train
+como accedo a la biblioteca virtual,biblioteca,train
+hay salas de estudio en la biblioteca,biblioteca,train
+como renuevo un prestamo,biblioteca,train
+la biblioteca pedro zulen abre los sabados,biblioteca,test
+como consulto el catalogo de la biblioteca,biblioteca,train
+puedo usar la biblioteca de otra facultad,biblioteca,train
+como accedo a scopus con mi correo institucional,biblioteca,train
+donde encuentro libros de mi carrera,biblioteca,train
+biblio central horario,biblioteca,train
+kiero un libro de calculo,biblioteca,train
+libros prestamo xfa,biblioteca,train
+bases de datos como entro,biblioteca,train
+no devolvi un libro q pasa,biblioteca,train
+quien gano el clasico,fuera_de_dominio,test
+cual es la capital de peru,fuera_de_dominio,train
+recomiendame una cancion,fuera_de_dominio,test
+como esta el clima hoy,fuera_de_dominio,test
+cuentame un chiste,fuera_de_dominio,train
+cuanto es dos mas dos,fuera_de_dominio,train
+quien es el presidente,fuera_de_dominio,train
+como hago un pollo a la brasa,fuera_de_dominio,train
+que pelicula me recomiendas,fuera_de_dominio,train
+donde queda el aeropuerto,fuera_de_dominio,train
+como saco mi pasaporte,fuera_de_dominio,train
+cual es el mejor celular,fuera_de_dominio,train
+quien descubrio america,fuera_de_dominio,train
+como se juega ajedrez,fuera_de_dominio,train
+que hora es,fuera_de_dominio,train
+como bajo de peso,fuera_de_dominio,train
+cual es tu color favorito,fuera_de_dominio,test
+como invierto en la bolsa,fuera_de_dominio,train
+recomiendame un videojuego,fuera_de_dominio,train
+como arreglo mi computadora,fuera_de_dominio,train
+traduce hello al español,fuera_de_dominio,train
+como saco mi dni,fuera_de_dominio,train
+cuanto cuesta un pasaje a cusco,fuera_de_dominio,test
+quien gano el mundial,fuera_de_dominio,train
+dime algo interesante,fuera_de_dominio,train
+en que pagina del sum me matriculo,matricula,train
+me sale error al registrar mis asignaturas,matricula,train
+cuantas veces puedo entrar al sum para matricularme,matricula,train
+tengo deuda con la facultad me dejan matricular,matricula,train
+necesito que vise mi reporte el vicedecanato,matricula,train
+cuando sale el cronograma del semestre 2027-I,calendario,train
+que dia empiezan las matriculas en sistemas,calendario,train
+fecha de inicio de clases,calendario,train
+cuando es el plazo para pedir reserva,calendario,train
+hasta que fecha pueden subir las notas los profesores,calendario,train
+que significa tener tutoria obligatoria,repitencia,train
+si jalo un curso tiene prioridad en mi matricula,repitencia,train
+me separan un año si desapruebo tres veces,repitencia,train
+que pasa si no voy a la tutoria y vuelvo a jalar,repitencia,train
+desaprobe quimica y no la dictan este ciclo,repitencia,train
+me voy de viaje un semestre que tramite hago,reserva_retiro,train
+quiero pausar la carrera por trabajo,reserva_retiro,train
+como vuelvo despues de tres años sin estudiar,reserva_retiro,train
+puedo anular el semestre si estoy enfermo,reserva_retiro,train
+que pasa con mi vacante si dejo de estudiar,reserva_retiro,train
+puedo sacar cursos de mi matricula,creditos_cursos,train
+cuantos creditos tiene que tener un alumno regular,creditos_cursos,train
+me puedo matricular en verano para subsanar,creditos_cursos,train
+que hago si tengo cruce de horarios en dos cursos,creditos_cursos,train
+en el regimen anual cuantos creditos se llevan,creditos_cursos,train
+que trabajo de investigacion piden para graduarme,grados_titulos,train
+donde inicio el tramite de mi titulo,grados_titulos,train
+cuando me dan el diploma,grados_titulos,train
+necesito idioma extranjero para graduarme,grados_titulos,train
+como saco la constancia de egreso,grados_titulos,train
+donde descargo mi historial de calificaciones,tramites,train
+como pido mi constancia de quinto superior,tramites,train
+me pueden convalidar cursos de mi otra carrera,tramites,train
+donde reclamo una nota mal registrada,tramites,train
+como hago para pasarme a otra escuela,tramites,train
+hay ayuda para estudiantes de bajos recursos,bienestar,train
+donde queda la clinica de la universidad,bienestar,train
+necesito un certificado medico para la facultad,bienestar,train
+atienden psicologos gratis en san marcos,bienestar,train
+como solicito el servicio de comedor,bienestar,train
+como reservo un libro de la biblioteca,biblioteca,train
+cuantos dias me prestan un libro,biblioteca,train
+como entro al repositorio de tesis,biblioteca,train
+hay multa por devolver tarde un libro,biblioteca,train
+puedo usar internet en la biblioteca,biblioteca,train
+cual es el precio del dolar hoy,fuera_de_dominio,train
+escribeme un poema de amor,fuera_de_dominio,train
+quien canta despacito,fuera_de_dominio,train
+como se cocina arroz chaufa,fuera_de_dominio,train
+cuantos habitantes tiene el peru,fuera_de_dominio,train

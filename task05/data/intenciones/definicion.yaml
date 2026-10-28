@@ -1,0 +1,83 @@
+# Intenciones del componente NLP/ML (las 10 de data-model.md). Por cada intención:
+# detalles requeridos/opcionales, acción y la pregunta para pedir un detalle que falta.
+# `plantilla` solo existe cuando accion = PLANTILLA.
+
+matricula:
+  descripcion: "Matrícula"
+  ejemplo_menu: "¿Cómo me matriculo en el SUM?"
+  requeridos: [facultad]
+  opcionales: [periodo, tipo_tramite]
+  accion: RETRIEVAL_LLM
+  pregunta_detalle:
+    facultad: "¿De qué facultad eres? (por ejemplo: FISI, Derecho, Medicina)"
+
+calendario:
+  descripcion: "Calendario y fechas"
+  ejemplo_menu: "¿Hasta cuándo es la matrícula?"
+  requeridos: [facultad]
+  opcionales: [periodo]
+  accion: PLANTILLA
+  fuente_plantilla: matricula-2026-art-05
+  plantilla: >-
+    Las fechas de matrícula{periodo_txt} para la {facultad_nombre} las fija el cronograma de actividades
+    académicas, que aprueba el Consejo Universitario y se formaliza mediante resolución rectoral
+    (Art. 5 del Reglamento de Matrícula 2026). Las fechas vigentes se publican en el portal de tu
+    facultad y las informa su Unidad de Matrícula, Registro Académico, Grados y Títulos.
+  pregunta_detalle:
+    facultad: "¿De qué facultad eres? Así te indico dónde consultar el cronograma."
+
+repitencia:
+  descripcion: "Repitencia y cursos desaprobados"
+  ejemplo_menu: "Me jalaron un curso dos veces, ¿qué pasa?"
+  requeridos: []
+  opcionales: [curso, veces]
+  accion: RETRIEVAL_LLM
+
+reserva_retiro:
+  descripcion: "Reserva, anulación y retiro"
+  ejemplo_menu: "¿Cómo hago la reserva de matrícula?"
+  requeridos: []
+  opcionales: [tipo_tramite]
+  accion: RETRIEVAL_LLM
+
+creditos_cursos:
+  descripcion: "Créditos, rectificación y verano"
+  ejemplo_menu: "¿Cuántos créditos puedo llevar?"
+  requeridos: []
+  opcionales: [periodo]
+  accion: RETRIEVAL_LLM
+
+grados_titulos:
+  descripcion: "Grados y títulos"
+  ejemplo_menu: "¿Qué necesito para el bachiller?"
+  requeridos: []
+  opcionales: [grado]
+  accion: RETRIEVAL_LLM
+
+tramites:
+  descripcion: "Trámites y documentos"
+  ejemplo_menu: "¿Cómo pido una constancia de estudios?"
+  requeridos: []
+  opcionales: [tipo_tramite]
+  accion: RETRIEVAL_LLM
+
+bienestar:
+  descripcion: "Bienestar (comedor, salud, apoyo)"
+  ejemplo_menu: "¿Cómo accedo al comedor universitario?"
+  requeridos: []
+  opcionales: []
+  accion: RETRIEVAL
+
+biblioteca:
+  descripcion: "Biblioteca"
+  ejemplo_menu: "¿Cómo saco un libro de la biblioteca?"
+  requeridos: []
+  opcionales: []
+  accion: RETRIEVAL
+
+fuera_de_dominio:
+  descripcion: "Fuera de dominio"
+  ejemplo_menu: "—"
+  requeridos: []
+  opcionales: []
+  accion: RECHAZO_CORTES
