@@ -1,0 +1,54 @@
+pregunta,tema,id_esperado
+explicame el procedimiento para matricularme desde mi celular,matricula,faq-001
+la matricula se puede hacer en persona en la universidad,matricula,faq-002
+que tipos de matricula contempla el reglamento,matricula,faq-003
+se me paso el plazo para inscribirme hay alguna opcion,matricula,faq-004
+cuales son las condiciones para que me dejen matricular,matricula,faq-005
+la matricula es algo personal o la hace la escuela,matricula,faq-006
+necesito pausar mi carrera por un semestre,reserva_retiro,faq-007
+como me reincorporo despues de haber reservado,reserva_retiro,faq-008
+puedo dar de baja mi matricula del ciclo actual,reserva_retiro,faq-009
+estuve tres años sin estudiar que pasa con mi condicion,reserva_retiro,faq-010
+quiero darme de baja de la escuela de forma permanente,reserva_retiro,faq-011
+si repruebo un curso estoy obligado a llevarlo de nuevo,repitencia,faq-012
+desaprobe la misma materia en dos ciclos me asignan tutoria,repitencia,faq-013
+llevo tres desaprobaciones en un mismo curso,repitencia,faq-014
+cuantas veces puedo desaprobar antes de que me separen,repitencia,faq-015
+me quedan dos cursos pendientes hay un examen extraordinario,repitencia,faq-016
+a que se le llama repitencia en san marcos,repitencia,faq-017
+cuantos creditos debo llevar para no perder la condicion de regular,creditos_cursos,faq-018
+me matricule en 9 creditos me pueden sancionar,creditos_cursos,faq-019
+quiero cambiar un curso por otro ya matriculado,creditos_cursos,faq-020
+hay limite de creditos en el ciclo de vacaciones,creditos_cursos,faq-021
+mi malla curricular cambio en que plan quedo,creditos_cursos,faq-022
+en que momento paso a ser egresado de mi escuela,grados_titulos,faq-023
+que me piden para tramitar el grado de bachiller,grados_titulos,faq-024
+pasos para conseguir el titulo de mi carrera,grados_titulos,faq-025
+quiero ver todas las notas que he sacado en la carrera,tramites,faq-026
+donde consigo el documento con mis cursos pendientes antes de matricularme,tramites,faq-027
+que formula usan para el promedio,tramites,faq-028
+como calculan el orden de merito y el tercio superior,tramites,faq-029
+estudie en otra universidad me reconocen los cursos,tramites,faq-030
+puedo cambiarme de escuela profesional sin volver a postular,tramites,faq-031
+como saco un certificado de que estoy matriculado,tramites,faq-032
+que organo aprueba el cronograma de actividades,calendario,faq-033
+en que fechas puedo matricularme este ciclo,calendario,faq-034
+como postulo al servicio de comida de la universidad,bienestar,faq-035
+mi familia tiene problemas economicos y no puedo pagar mis pasajes,bienestar,faq-036
+donde tramito el certificado de salud anual,bienestar,faq-037
+como hago para llevarme libros de la biblioteca central,biblioteca,faq-038
+como consulto articulos de revistas indexadas con mi cuenta de la universidad,biblioteca,faq-039
+tengo un libro sin devolver me afecta para la matricula,biblioteca,faq-040
+el docente puso mal mi nota hay plazo para corregirla,calendario,faq-041
+cual es el rio mas largo del mundo,fuera_de_dominio,
+cuantos goles tiene messi,fuera_de_dominio,
+que serie me recomiendas ver,fuera_de_dominio,
+como saco mi licencia de conducir,fuera_de_dominio,
+como preparo un lomo saltado,fuera_de_dominio,
+a que hora abre la piscina de la universidad,bienestar,
+cuanto cuesta estudiar en la universidad de lima,fuera_de_dominio,
+quien escribio cien años de soledad,fuera_de_dominio,
+como configuro mi impresora,fuera_de_dominio,
+va a llover este fin de semana,fuera_de_dominio,
+como llego al centro de lima en bus,fuera_de_dominio,
+como aplico a una maestria en espana,fuera_de_dominio,

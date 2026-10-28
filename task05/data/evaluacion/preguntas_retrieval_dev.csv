@@ -1,0 +1,53 @@
+pregunta,tema,id_esperado
+como me inscribo en mis cursos por internet,matricula,faq-001
+se puede hacer la matricula en ventanilla en la facultad,matricula,faq-002
+que clases de matricula hay,matricula,faq-003
+me pase de la fecha de matricula que hago,matricula,faq-004
+que necesito para poder matricularme,matricula,faq-005
+quien se encarga de hacer mi matricula,matricula,faq-006
+quiero postergar mi matricula este semestre,reserva_retiro,faq-007
+deje de estudiar un tiempo como vuelvo a matricularme,reserva_retiro,faq-008
+quiero anular el ciclo por motivos de salud,reserva_retiro,faq-009
+que pasa si no me matriculo por tres años,reserva_retiro,faq-010
+quiero renunciar a mi carrera definitivamente,reserva_retiro,faq-011
+jale un curso tengo que volver a llevarlo,repitencia,faq-012
+me jalaron 2 veces en fisica que me toca,repitencia,faq-013
+desaprobe por tercera vez una materia,repitencia,faq-014
+me pueden botar si desapruebo cuatro veces,repitencia,faq-015
+que es el examen ad hoc para los cursos que debo,repitencia,faq-016
+cual es el minimo y maximo de creditos por semestre,creditos_cursos,faq-018
+que pasa si llevo menos de 12 creditos,creditos_cursos,faq-019
+quiero retirar un curso despues de matricularme,creditos_cursos,faq-020
+cuantos creditos se pueden llevar en verano,creditos_cursos,faq-021
+diferencia entre plan vigente y plan en extincion,creditos_cursos,faq-022
+cuando me considero egresado,grados_titulos,faq-023
+que requisitos piden para el bachiller,grados_titulos,faq-024
+como saco mi titulo profesional,grados_titulos,faq-025
+donde veo mi record de notas,tramites,faq-026
+donde bajo el reporte de pre matricula,tramites,faq-027
+como calculan el promedio ponderado,tramites,faq-028
+como se si estoy en el tercio superior,tramites,faq-029
+vengo de otra universidad puedo convalidar cursos,tramites,faq-030
+me quiero cambiar a otra escuela dentro de san marcos,tramites,faq-031
+necesito una constancia de matricula,tramites,faq-032
+quien aprueba el calendario academico,calendario,faq-033
+hasta que dia hay matricula,calendario,faq-034
+como entro al comedor de la universidad,bienestar,faq-035
+tengo problemas economicos donde pido ayuda,bienestar,faq-036
+donde me hago el examen medico para la matricula,bienestar,faq-037
+como pido prestado un libro,biblioteca,faq-038
+como entro a las revistas cientificas en linea,biblioteca,faq-039
+debo un libro puedo matricularme igual,biblioteca,faq-040
+hasta cuando pueden cambiar mis notas del ciclo,calendario,faq-041
+cual es la capital de francia,fuera_de_dominio,
+quien gano el partido de ayer,fuera_de_dominio,
+recomiendame una pelicula,fuera_de_dominio,
+cuanto cuesta el pasaje en el metropolitano,fuera_de_dominio,
+como hago una receta de ceviche,fuera_de_dominio,
+cual es el horario del gimnasio de la universidad,bienestar,
+cuanto cuesta la pension de la universidad catolica,fuera_de_dominio,
+quien es el presidente del peru,fuera_de_dominio,
+como instalo python en mi laptop,fuera_de_dominio,
+que tiempo hara manana en lima,fuera_de_dominio,
+donde queda el estadio nacional,fuera_de_dominio,
+como postulo a una beca en el extranjero,fuera_de_dominio,

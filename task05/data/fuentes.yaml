@@ -1,0 +1,36 @@
+# Fuentes oficiales de la base de conocimiento. `python -m src.conocimiento` descarga los PDF
+# (data/raw/, no versionado) y genera data/conocimiento/pasajes.jsonl.
+
+- id: matricula-2026
+  documento: "Reglamento General de Matrícula Pregrado 2026 (RR N°002642-2026)"
+  url: "https://cdn.www.gob.pe/uploads/document/file/9508789/7072215-reglamento-general-de-matricula-pregrado-2026-rr-n-002642-2026.pdf"
+  fecha_fuente: "2026-02-25"
+  oficina: "Unidad de Matrícula, Registro Académico, Grados y Títulos de tu facultad"
+  # Se omiten los artículos internos de gestión (accesos al SUM, bases de datos de la OSUM)
+  # 14 repite al 34 y 16 está cubierto por el Art. 13 f
+  excluir_articulos: [1, 2, 3, 6, 7, 8, 9, 14, 15, 16, 17]
+  incluir_disposiciones: true
+  incluir_anexo_01: true
+
+- id: ley-30220
+  documento: "Ley Universitaria N° 30220"
+  url: "https://diariooficial.elperuano.pe/Normas/obtenerDocumento?idNorma=50"
+  fecha_fuente: "2014-07-09"
+  oficina: "Vicedecanato Académico de tu facultad"
+  # El texto actualizado de El Peruano no permite extraer texto; se transcribe el artículo,
+  # cuyo contenido coincide con lo que cita el Reglamento de Matrícula 2026 (Art. 12 y 13 c).
+  pasajes_manuales:
+    - ubicacion: "Art. 102"
+      tema: repitencia
+      texto: >-
+        Artículo 102. Matrícula condicionada por rendimiento académico. La desaprobación de una
+        misma materia por tres veces da lugar a que el estudiante sea separado temporalmente por un
+        año de la universidad. Al término de este plazo, el estudiante solo se podrá matricular en
+        la materia que desaprobó anteriormente, para retornar de manera regular a sus estudios en el
+        ciclo siguiente. Si desaprueba por cuarta vez procede su retiro definitivo. Lo dispuesto en
+        el párrafo precedente no impide que el Estatuto de la universidad contemple la separación
+        automática y definitiva por la desaprobación de una materia por tercera vez.
+
+# Reglamento General de Grados y Títulos UNMSM (RR 01827-R-17, mod. RR 004503-2021-R y
+# RR 003078-2022-R): no localizado en texto completo (búsqueda del 2026-10-27). El tema
+# grados_titulos se cubre con FAQ referenciales que remiten a la oficina oficial.
