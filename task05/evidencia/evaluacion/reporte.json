@@ -1,0 +1,499 @@
+{
+  "umbrales": {
+    "faq": 0.33,
+    "contexto": 0.17,
+    "aceptar": 0.5,
+    "rechazar": 0.3,
+    "metodo": "probabilidades fuera de fold (validación cruzada) del modelo seleccionado"
+  },
+  "retrieval": {
+    "dev": {
+      "umbral_faq": 0.33,
+      "hit_at_1": 0.825,
+      "hit_at_3": 0.95,
+      "no_respuesta_correcta": 0.9166666666666666,
+      "n_con_respuesta": 40,
+      "n_sin_respuesta": 12,
+      "umbral_contexto": 0.17
+    },
+    "prueba_componente": {
+      "umbral_faq": 0.33,
+      "hit_at_1": 0.7804878048780488,
+      "hit_at_3": 0.926829268292683,
+      "no_respuesta_correcta": 0.8333333333333334,
+      "n_con_respuesta": 41,
+      "n_sin_respuesta": 12
+    },
+    "prueba_pipeline": {
+      "hit_at_1": 0.8536585365853658,
+      "no_respuesta_correcta": 0.9166666666666666,
+      "n_con_respuesta": 41,
+      "n_sin_respuesta": 12
+    },
+    "prueba_pipeline_sin_confirmacion": {
+      "hit_at_1": 0.6097560975609756,
+      "no_respuesta_correcta": 0.9166666666666666,
+      "n_con_respuesta": 41,
+      "n_sin_respuesta": 12
+    }
+  },
+  "cv": [
+    {
+      "candidato": "A·NB",
+      "f1_macro_media": 0.747033522033522,
+      "f1_macro_std": 0.03711311193100435,
+      "por_fold": [
+        0.759,
+        0.7351,
+        0.7946,
+        0.6832,
+        0.7633
+      ],
+      "complejidad": 1
+    },
+    {
+      "candidato": "A·LR",
+      "f1_macro_media": 0.7688513708513709,
+      "f1_macro_std": 0.03712368208168435,
+      "por_fold": [
+        0.7749,
+        0.7618,
+        0.8206,
+        0.7058,
+        0.7811
+      ],
+      "complejidad": 2
+    },
+    {
+      "candidato": "A·SVM",
+      "f1_macro_media": 0.7736140526140526,
+      "f1_macro_std": 0.04033645023484383,
+      "por_fold": [
+        0.7484,
+        0.7626,
+        0.8202,
+        0.7177,
+        0.8192
+      ],
+      "complejidad": 3
+    },
+    {
+      "candidato": "B·Emb+LR",
+      "f1_macro_media": 0.7413421023421024,
+      "f1_macro_std": 0.039169009267121725,
+      "por_fold": [
+        0.7772,
+        0.7986,
+        0.7222,
+        0.7058,
+        0.7029
+      ],
+      "complejidad": 4
+    },
+    {
+      "candidato": "A+B promedio",
+      "f1_macro_media": 0.8413333333333333,
+      "f1_macro_std": 0.045255417927026344,
+      "por_fold": [
+        0.8391,
+        0.901,
+        0.8797,
+        0.7761,
+        0.8107
+      ],
+      "complejidad": 5,
+      "rama_a": "A·SVM"
+    }
+  ],
+  "seleccion": {
+    "ganador": "A+B promedio",
+    "regla_aplicada": "Mejor individual: A·SVM (0.774 ± 0.040). Empatados (diferencia < 1 std): A·NB, A·LR, A·SVM, B·Emb+LR → el más simple es A·NB. La combinación (0.841) supera al mejor individual por más de una std → se usa A+B.",
+    "justificacion": "Regla fijada antes de ver los resultados (concept-decisions.md)."
+  },
+  "test": {
+    "accuracy": 0.84,
+    "f1_macro": 0.8338639138639138,
+    "n": 50,
+    "reporte_por_intencion": {
+      "biblioteca": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 5.0
+      },
+      "bienestar": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1-score": 0.8888888888888888,
+        "support": 5.0
+      },
+      "calendario": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 5.0
+      },
+      "creditos_cursos": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 5.0
+      },
+      "fuera_de_dominio": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 5.0
+      },
+      "grados_titulos": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1-score": 0.9090909090909091,
+        "support": 5.0
+      },
+      "matricula": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 5.0
+      },
+      "repitencia": {
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1-score": 0.7692307692307693,
+        "support": 5.0
+      },
+      "reserva_retiro": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1-score": 0.6,
+        "support": 5.0
+      },
+      "tramites": {
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1-score": 0.5714285714285714,
+        "support": 5.0
+      },
+      "accuracy": 0.84,
+      "macro avg": {
+        "precision": 0.8658333333333333,
+        "recall": 0.8400000000000001,
+        "f1-score": 0.8338639138639138,
+        "support": 50.0
+      },
+      "weighted avg": {
+        "precision": 0.8658333333333335,
+        "recall": 0.84,
+        "f1-score": 0.8338639138639138,
+        "support": 50.0
+      }
+    },
+    "clases": [
+      "biblioteca",
+      "bienestar",
+      "calendario",
+      "creditos_cursos",
+      "fuera_de_dominio",
+      "grados_titulos",
+      "matricula",
+      "repitencia",
+      "reserva_retiro",
+      "tramites"
+    ],
+    "matriz_confusion": [
+      [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        2
+      ]
+    ]
+  },
+  "errores": [
+    {
+      "texto": "me olvide de matricularme todavia puedo",
+      "real": "matricula",
+      "predicho": "reserva_retiro",
+      "confianza": 0.379
+    },
+    {
+      "texto": "que es la separacion definitiva voluntaria",
+      "real": "reserva_retiro",
+      "predicho": "repitencia",
+      "confianza": 0.365
+    },
+    {
+      "texto": "que pasa si no me matriculo varios ciclos",
+      "real": "reserva_retiro",
+      "predicho": "repitencia",
+      "confianza": 0.607
+    },
+    {
+      "texto": "como retiro un curso despues de matricularme",
+      "real": "creditos_cursos",
+      "predicho": "reserva_retiro",
+      "confianza": 0.503
+    },
+    {
+      "texto": "como saco mi historial academico",
+      "real": "tramites",
+      "predicho": "grados_titulos",
+      "confianza": 0.255
+    },
+    {
+      "texto": "como convalido cursos",
+      "real": "tramites",
+      "predicho": "creditos_cursos",
+      "confianza": 0.396
+    },
+    {
+      "texto": "el profesor puso mal mi nota como reclamo",
+      "real": "tramites",
+      "predicho": "repitencia",
+      "confianza": 0.424
+    },
+    {
+      "texto": "como me inscribo al comedor",
+      "real": "bienestar",
+      "predicho": "matricula",
+      "confianza": 0.447
+    }
+  ],
+  "palabras_clave": {
+    "biblioteca": [
+      "libr",
+      "bibliotec",
+      "prestam",
+      "repositori",
+      "central",
+      "com entro",
+      "entro",
+      "com acced",
+      "acced",
+      "com renuev"
+    ],
+    "bienestar": [
+      "ayud",
+      "comedor",
+      "medic",
+      "apoy",
+      "clinic",
+      "psicolog",
+      "salud",
+      "universitari",
+      "estres u",
+      "estres"
+    ],
+    "calendario": [
+      "cuand",
+      "fech",
+      "dia",
+      "plaz",
+      "que dia",
+      "calendari",
+      "plaz anul",
+      "cuand matricul",
+      "fech pued",
+      "que fech"
+    ],
+    "creditos_cursos": [
+      "credit",
+      "curs",
+      "que rectif",
+      "veran",
+      "curs matricul",
+      "calcul cicl",
+      "cicl estudi",
+      "plan estudi",
+      "plan",
+      "agreg"
+    ],
+    "fuera_de_dominio": [
+      "qui",
+      "que hor",
+      "hor",
+      "qued aeropuert",
+      "aeropuert",
+      "peru",
+      "dim",
+      "dim interes",
+      "interes",
+      "dos"
+    ],
+    "grados_titulos": [
+      "titul",
+      "egres",
+      "bachill",
+      "tramit",
+      "constanci egres",
+      "tesis",
+      "gradu",
+      "diplom",
+      "dan",
+      "cuand dan"
+    ],
+    "matricula": [
+      "matricul",
+      "hac",
+      "sum",
+      "com matricul",
+      "hac matricul",
+      "hag matricul",
+      "registr asignatur",
+      "necesit",
+      "com hac",
+      "dond hag"
+    ],
+    "repitencia": [
+      "jal",
+      "que",
+      "desaprob",
+      "vec",
+      "que repitent",
+      "repitent",
+      "tercer",
+      "condicion",
+      "matricul condicion",
+      "que matricul"
+    ],
+    "reserva_retiro": [
+      "anul",
+      "quier",
+      "dej",
+      "reserv",
+      "reactualiz matricul",
+      "reactualiz",
+      "com anul",
+      "que abandon",
+      "abandon estudi",
+      "abandon"
+    ],
+    "tramites": [
+      "not",
+      "report",
+      "convalid",
+      "com",
+      "veo",
+      "com reingres",
+      "reingres",
+      "reingres univers",
+      "pre matricul",
+      "pre"
+    ]
+  }
+}

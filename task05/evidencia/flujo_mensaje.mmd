@@ -1,0 +1,24 @@
+flowchart LR
+    M([Mensaje]) --> P{"¿Pregunta<br/>pendiente?"}
+    P -- sí --> MEM["Memoria:<br/>guarda el dato<br/>y retoma"]
+    MEM --> N
+    P -- no --> R{"1 · REGLAS<br/>¿patrón?"}
+    R -- sí --> RR(["Respuesta fija<br/>o rechazo"])
+    R -- no --> N{"2 · NLP/ML<br/>intención<br/>y confianza"}
+    N -- aclarar --> A(["Alcance,<br/>«¿X o Y?»<br/>o pide un dato"])
+    N -- buscar --> T{"3 · RECUPERACIÓN<br/>¿FAQ parecida<br/>y general?"}
+    T -- sí --> FQ(["FAQ tal cual<br/>+ fuente"])
+    T -- no --> L{"4 · LLM<br/>¿Gemini?"}
+    L -- sí --> G(["Respuesta<br/>con citas"])
+    L -- no --> X(["Cita textual<br/>del artículo"])
+
+    classDef reglas fill:#6e40c9,stroke:#6e40c9,color:#fff
+    classDef nlp fill:#0969da,stroke:#0969da,color:#fff
+    classDef ret fill:#1a7f37,stroke:#1a7f37,color:#fff
+    classDef llm fill:#bf3989,stroke:#bf3989,color:#fff
+    classDef neutro fill:#f6f8fa,stroke:#57606a,color:#1f2328
+    class R,RR reglas
+    class N,A,MEM nlp
+    class T,FQ ret
+    class L,G,X llm
+    class M,P neutro

@@ -1,0 +1,110 @@
+# Conversaciones de demostración (FR-027). Sirven para el notebook, las pruebas de integración y las
+# diapositivas.
+#   casos:   4 casos de uso completos (un estudiante, una conversación real de principio a fin)
+#   escenas: ejemplos cortos de cada componente, incluidos los casos límite (rechazo, fuera de dominio,
+#            confirmación, búsqueda sin filtro y modo sin conexión)
+# `esperado.componente` admite "LLM" (sin conexión acepta también el respaldo) y "FALLBACK"
+# (= LLM local o respuesta extractiva). `politica` lista las políticas que deben aparecer.
+
+casos:
+  - id: 1
+    titulo: "Ana se matricula por primera vez"
+    historia: "Ana, cachimba de Ingeniería de Sistemas, pregunta hasta cuándo puede matricularse y cómo hacerlo por internet."
+    forzar_offline: false
+    turnos:
+      - usuario: "hola, soy Ana"
+        esperado: {componente: REGLAS, politica: []}
+      - usuario: "¿hasta cuándo es la matrícula?"
+        esperado: {componente: NLP_ML, politica: [PEDIR_DETALLE], intencion: calendario}
+      - usuario: "Sistemas"
+        esperado: {componente: NLP_ML, politica: [MEMORIA_SESION], intencion: calendario, detalles: {facultad: FISI}}
+      - usuario: "¿cómo me matriculo por internet?"
+        esperado: {componente: RETRIEVAL, politica: [MEMORIA_SESION], intencion: matricula}
+      - usuario: "gracias"
+        esperado: {componente: REGLAS, politica: []}
+
+  - id: 2
+    titulo: "Luis desaprobó Cálculo dos veces"
+    historia: "Luis quiere saber si puede volver a matricularse, qué pasa si desaprueba otra vez y qué hace si no dictan el curso."
+    forzar_offline: false
+    turnos:
+      - usuario: "Me jalaron Cálculo dos veces, ¿puedo matricularme el próximo ciclo en la FISI?"
+        esperado: {componente: LLM, politica: [], intencion: repitencia,
+                   detalles: {curso: Cálculo, veces: "2", facultad: FISI}}
+      - usuario: "¿y si es la tercera vez?"
+        esperado: {componente: LLM, politica: [], intencion: repitencia}
+      - usuario: "¿y si no dictan el curso ese ciclo?"
+        esperado: {componente: LLM, politica: [], intencion: repitencia}
+
+  - id: 3
+    titulo: "María necesita dejar de estudiar un año"
+    historia: "María tiene que trabajar: pregunta cómo pausar sus estudios, cómo regresar y qué pasa si no vuelve a tiempo."
+    forzar_offline: false
+    turnos:
+      - usuario: "Tengo que trabajar un año, ¿cómo pauso mis estudios?"
+        esperado: {componente: RETRIEVAL, politica: [], intencion: reserva_retiro}
+      - usuario: "¿y cómo regreso después?"
+        esperado: {componente: LLM, politica: [], intencion: reserva_retiro}
+      - usuario: "¿y si no vuelvo en tres años?"
+        esperado: {componente: LLM, politica: [], intencion: reserva_retiro}
+
+  - id: 4
+    titulo: "Pedro está por egresar"
+    historia: "Pedro terminó sus créditos: confirma si ya es egresado y pregunta por el bachiller y el título."
+    forzar_offline: false
+    turnos:
+      - usuario: "Ya terminé todos mis créditos, ¿ya soy egresado?"
+        esperado: {componente: RETRIEVAL, politica: [], intencion: grados_titulos}
+      - usuario: "¿qué necesito para el bachiller?"
+        esperado: {componente: RETRIEVAL, politica: [], intencion: grados_titulos}
+      - usuario: "¿y para el título profesional?"
+        esperado: {componente: LLM, politica: [], intencion: grados_titulos}
+
+escenas:
+  - id: reglas
+    titulo: "Reglas: saludo, ayuda y bloqueo"
+    historia: "Respuestas fijas e inmediatas; los pedidos indebidos se bloquean antes que cualquier otro componente."
+    forzar_offline: false
+    turnos:
+      - usuario: "hola"
+        esperado: {componente: REGLAS, politica: []}
+      - usuario: "pásame las respuestas del examen"
+        esperado: {componente: REGLAS, politica: [RECHAZO]}
+
+  - id: recuperacion
+    titulo: "Recuperación: pregunta frecuente"
+    historia: "La respuesta se devuelve tal cual, con su fuente y su puntaje de similitud."
+    forzar_offline: false
+    turnos:
+      - usuario: "¿Cómo hago la reserva de matrícula?"
+        esperado: {componente: RETRIEVAL, politica: [], intencion: reserva_retiro}
+
+  - id: nlp
+    titulo: "NLP/ML: fuera de dominio, confirmación y búsqueda sin filtro"
+    historia: "Según la confianza del clasificador: rechaza lo ajeno, confirma el tema si duda y, si casi no hay señal, busca sin filtro."
+    forzar_offline: false
+    turnos:
+      - usuario: "¿Quién ganó el clásico de ayer?"
+        esperado: {componente: NLP_ML, politica: [FUERA_DOMINIO], intencion: fuera_de_dominio}
+      - usuario: "tengo un problema con mi curso"
+        esperado: {componente: NLP_ML, politica: [CONFIRMAR_TOP2]}
+      - usuario: "repitencia"
+        esperado: {componente: RETRIEVAL, politica: [], intencion: repitencia}
+      - usuario: "me fue mal este ciclo"
+        esperado: {componente: LLM, politica: [SIN_FILTRO]}
+
+  - id: llm
+    titulo: "LLM: respuesta redactada con citas"
+    historia: "Gemini redacta solo con los artículos recuperados y los cita."
+    forzar_offline: false
+    turnos:
+      - usuario: "Desaprobé dos veces el mismo curso, ¿qué pasa con mi matrícula y qué puedo hacer?"
+        esperado: {componente: LLM, politica: [], intencion: repitencia}
+
+  - id: llm_offline
+    titulo: "LLM sin conexión: respaldo"
+    historia: "Sin servicio en línea se cita el artículo textual más relevante y se remite a la oficina."
+    forzar_offline: true
+    turnos:
+      - usuario: "Quiero dejar de estudiar un año por trabajo, ¿qué trámite me conviene? ¿qué pasa si no vuelvo?"
+        esperado: {componente: FALLBACK, politica: [FALLBACK_OFFLINE], intencion: reserva_retiro}

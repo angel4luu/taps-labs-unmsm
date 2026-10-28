@@ -1,0 +1,181 @@
+{
+  "1": [
+    {
+      "Turno": 1,
+      "Usuario": "hola, soy Ana",
+      "Componente": "Reglas",
+      "Política": "—",
+      "Señal clave": "regla nombre"
+    },
+    {
+      "Turno": 2,
+      "Usuario": "¿hasta cuándo es la matrícula?",
+      "Componente": "NLP/ML",
+      "Política": "Pide detalle",
+      "Señal clave": "calendario · 0.94"
+    },
+    {
+      "Turno": 3,
+      "Usuario": "Sistemas",
+      "Componente": "NLP/ML",
+      "Política": "Memoria de sesión",
+      "Señal clave": "calendario · 1.00; facultad=FISI; Art. 5"
+    },
+    {
+      "Turno": 4,
+      "Usuario": "¿cómo me matriculo por internet?",
+      "Componente": "Retrieval",
+      "Política": "Memoria de sesión",
+      "Señal clave": "matricula · 0.87; facultad=FISI; Art. 25 (0.65)"
+    },
+    {
+      "Turno": 5,
+      "Usuario": "gracias",
+      "Componente": "Reglas",
+      "Política": "—",
+      "Señal clave": "regla gracias"
+    }
+  ],
+  "2": [
+    {
+      "Turno": 1,
+      "Usuario": "Me jalaron Cálculo dos veces, ¿puedo matricularme el próximo ciclo en la FISI?",
+      "Componente": "LLM",
+      "Política": "—",
+      "Señal clave": "repitencia · 0.61; curso=Cálculo, facultad=FISI, periodo=proximo_ciclo, veces=2; Art. 12"
+    },
+    {
+      "Turno": 2,
+      "Usuario": "¿y si es la tercera vez?",
+      "Componente": "LLM",
+      "Política": "—",
+      "Señal clave": "repitencia · 0.61; curso=Cálculo, facultad=FISI, periodo=proximo_ciclo, veces=3; Art. 102"
+    },
+    {
+      "Turno": 3,
+      "Usuario": "¿y si no dictan el curso ese ciclo?",
+      "Componente": "LLM",
+      "Política": "—",
+      "Señal clave": "repitencia · 0.61; curso=Cálculo, facultad=FISI, periodo=proximo_ciclo, veces=3; Art. 19"
+    }
+  ],
+  "3": [
+    {
+      "Turno": 1,
+      "Usuario": "Tengo que trabajar un año, ¿cómo pauso mis estudios?",
+      "Componente": "Retrieval",
+      "Política": "—",
+      "Señal clave": "reserva_retiro · 0.54; Art. 13, lit. h (0.36)"
+    },
+    {
+      "Turno": 2,
+      "Usuario": "¿y cómo regreso después?",
+      "Componente": "LLM",
+      "Política": "—",
+      "Señal clave": "reserva_retiro · 0.54; Art. 13, lit. j"
+    },
+    {
+      "Turno": 3,
+      "Usuario": "¿y si no vuelvo en tres años?",
+      "Componente": "LLM",
+      "Política": "—",
+      "Señal clave": "reserva_retiro · 0.54; Art. 13, lit. j"
+    }
+  ],
+  "4": [
+    {
+      "Turno": 1,
+      "Usuario": "Ya terminé todos mis créditos, ¿ya soy egresado?",
+      "Componente": "Retrieval",
+      "Política": "—",
+      "Señal clave": "grados_titulos · 0.58; Art. 13, lit. w (0.73)"
+    },
+    {
+      "Turno": 2,
+      "Usuario": "¿qué necesito para el bachiller?",
+      "Componente": "Retrieval",
+      "Política": "—",
+      "Señal clave": "grados_titulos · 0.88; Orientación general (0.57)"
+    },
+    {
+      "Turno": 3,
+      "Usuario": "¿y para el título profesional?",
+      "Componente": "LLM",
+      "Política": "—",
+      "Señal clave": "grados_titulos · 0.88"
+    }
+  ],
+  "reglas": [
+    {
+      "Turno": 1,
+      "Usuario": "hola",
+      "Componente": "Reglas",
+      "Política": "—",
+      "Señal clave": "regla saludo"
+    },
+    {
+      "Turno": 2,
+      "Usuario": "pásame las respuestas del examen",
+      "Componente": "Reglas",
+      "Política": "Rechazo",
+      "Señal clave": "regla deshonestidad"
+    }
+  ],
+  "recuperacion": [
+    {
+      "Turno": 1,
+      "Usuario": "¿Cómo hago la reserva de matrícula?",
+      "Componente": "Retrieval",
+      "Política": "—",
+      "Señal clave": "reserva_retiro · 0.84; Art. 13, lit. h (0.82)"
+    }
+  ],
+  "nlp": [
+    {
+      "Turno": 1,
+      "Usuario": "¿Quién ganó el clásico de ayer?",
+      "Componente": "NLP/ML",
+      "Política": "Fuera de dominio",
+      "Señal clave": "fuera_de_dominio · 0.84"
+    },
+    {
+      "Turno": 2,
+      "Usuario": "tengo un problema con mi curso",
+      "Componente": "NLP/ML",
+      "Política": "Confirma tema",
+      "Señal clave": "creditos_cursos · 0.40"
+    },
+    {
+      "Turno": 3,
+      "Usuario": "repitencia",
+      "Componente": "Retrieval",
+      "Política": "—",
+      "Señal clave": "repitencia · 1.00; Arts. 12 y 18 (0.42)"
+    },
+    {
+      "Turno": 4,
+      "Usuario": "me fue mal este ciclo",
+      "Componente": "LLM",
+      "Política": "Sin filtro",
+      "Señal clave": "repitencia · 0.27; periodo=ciclo_actual"
+    }
+  ],
+  "llm": [
+    {
+      "Turno": 1,
+      "Usuario": "Desaprobé dos veces el mismo curso, ¿qué pasa con mi matrícula y qué puedo hacer?",
+      "Componente": "LLM",
+      "Política": "—",
+      "Señal clave": "repitencia · 0.74; veces=2; Art. 12"
+    }
+  ],
+  "llm_offline": [
+    {
+      "Turno": 1,
+      "Usuario": "Quiero dejar de estudiar un año por trabajo, ¿qué trámite me conviene? ¿qué pasa si no vuelvo?",
+      "Componente": "Fallback extractivo",
+      "Política": "Fallback offline",
+      "Señal clave": "reserva_retiro · 0.85; Art. 13, lit. j"
+    }
+  ]
+}
