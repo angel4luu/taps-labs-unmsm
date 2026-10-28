@@ -1,0 +1,38 @@
+name: task05
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - scikit-learn
+  - nltk
+  - spacy
+  - pypdf
+  - poppler        # pdftotext: extracción de texto sin palabras partidas
+  - requests
+  - pandas
+  - matplotlib
+  - pyyaml
+  - python-dotenv
+  - pydantic
+  - joblib
+  - ipywidgets
+  - jupyterlab
+  - nbconvert
+  - pytest
+  - python-pptx
+  - pip
+  - pip:
+      # torch solo CPU (evita descargar las ruedas CUDA)
+      - --extra-index-url https://download.pytorch.org/whl/cpu
+      - torch
+      - transformers
+      - accelerate
+      - sentence-transformers
+      - google-genai
+      - playwright
+
+# Pasos posteriores a la instalación (una sola vez):
+#   conda activate task05
+#   python -m spacy download es_core_news_sm
+#   python -c "import nltk; nltk.download('stopwords')"
+#   playwright install chromium

@@ -1,0 +1,25 @@
+# Alternativa a environment.yml para instalar con pip (Python 3.11):
+#   python -m venv .venv && source .venv/bin/activate      (Windows: .venv\Scripts\activate)
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+#   python -m spacy download es_core_news_sm
+scikit-learn
+nltk
+spacy
+pypdf
+requests
+pandas
+matplotlib
+pyyaml
+python-dotenv
+pydantic
+joblib
+ipywidgets
+jupyterlab
+nbconvert
+pytest
+python-pptx
+torch
+transformers
+sentence-transformers
+google-genai
+playwright

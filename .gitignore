@@ -10,7 +10,16 @@ __pycache__/
 /*/scraping.log
 /*/evidencia/*.pptx
 
+# task05: los datos de entrada están escritos a mano (FAQ, intenciones, reglas, flujos)
+# y sí se versionan; solo los PDF descargados se regeneran.
+!/task05/data/
+/task05/data/raw/
+
 # Editor y sistema operativo
 .vscode/
 .idea/
 .DS_Store
+
+.claude
+.specify
+specs/
